@@ -47,7 +47,9 @@ async def on_message(message):
 
 @target_client.event
 async def send_message(message_embed):
+    print(target_channel_id)
     channel = target_client.get_channel(target_channel_id)
+    print(channel)
     await channel.send({ embeds: [message_embed] })
 
 
