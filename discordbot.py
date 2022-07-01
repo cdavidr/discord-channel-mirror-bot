@@ -48,7 +48,7 @@ async def on_message(message):
 @target_client.event
 async def send_message(embed):
     channel = target_client.get_channel(target_channel_id)
-    await channel.send({ embeds: [embed] })
+    await channel.send({ embed: [embed] })
 
 
 loop = asyncio.get_event_loop()
