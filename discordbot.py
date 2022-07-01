@@ -53,6 +53,6 @@ async def send_message(embed):
 
 loop = asyncio.get_event_loop()
 task1 = loop.create_task(source_client.start(source_token, bot=False))
-task2 = loop.create_task(target_client.start(target_token, bot=False))
+task2 = loop.create_task(target_client.start(target_token, bot=True))
 gathered = asyncio.gather(task1, task2, loop=loop)
 loop.run_until_complete(gathered)
