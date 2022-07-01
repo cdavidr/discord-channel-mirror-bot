@@ -5,7 +5,13 @@ import os
 
 source_token = os.environ['SOURCE_DISCORD_BOT_TOKEN']
 target_token = os.environ['TARGET_DISCORD_BOT_TOKEN']
+
+#m
 source_channel_id = int(os.environ['SOURCE_CHANNEL_ID'])
+source_channel_id = int(os.environ['SOURCE_CHANNEL_ID_2'])
+source_channel_id = int(os.environ['SOURCE_CHANNEL_ID_3'])
+source_channel_id = int(os.environ['SOURCE_CHANNEL_ID_4'])
+
 target_channel_id = int(os.environ['TARGET_CHANNEL_ID'])
 
 source_client = discord.Client()
