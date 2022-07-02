@@ -1,1 +1,1 @@
-git+https://github.com/selfbot-py/discord.py@master
+git+https://github.com/cdavidr/discord.py@master
