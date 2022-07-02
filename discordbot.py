@@ -14,8 +14,8 @@ source_channel_id_4 = int(os.environ['SOURCE_CHANNEL_ID_4'])
 
 target_channel_id = int(os.environ['TARGET_CHANNEL_ID'])
 
-source_client = discord.Client()
-target_client = discord.Client()
+source_client = discord.Client(intents=discord.Intents.default())
+target_client = discord.Client(intents=discord.Intents.default())
 
 
 def find_url(string):
