@@ -1,1 +1,1 @@
-discord.py[voice]==1.4.0
+git+https://github.com/cdavidr/discord.py@master
