@@ -58,11 +58,8 @@ async def send_message(embed):
     await channel.send( embed=embed )
 
 
-#loop = asyncio.get_event_loop()
-#task1 = loop.create_task(source_client.start(source_token))
-#task2 = loop.create_task(target_client.start(target_token))
-#gathered = asyncio.gather(task1, task2, loop=loop)
-#loop.run_until_complete(gathered)
-
-source_client.run(source_token, bot=False)
-target_client.run(target_token, bot=True)
+loop = asyncio.get_event_loop()
+task1 = loop.create_task(source_client.start(source_token, bot=False))
+task2 = loop.create_task(target_client.start(target_token, bot=True))
+gathered = asyncio.gather(task1, task2, loop=loop)
+loop.run_until_complete(gathered)
