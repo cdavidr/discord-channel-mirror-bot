@@ -12,6 +12,17 @@ source_channel_id_2 = int(os.environ['SOURCE_CHANNEL_ID_2'])
 source_channel_id_3 = int(os.environ['SOURCE_CHANNEL_ID_3'])
 source_channel_id_4 = int(os.environ['SOURCE_CHANNEL_ID_4'])
 
+#z
+source_channel_id_5 = int(os.environ['SOURCE_CHANNEL_ID_5'])
+source_channel_id_6 = int(os.environ['SOURCE_CHANNEL_ID_6'])
+source_channel_id_7 = int(os.environ['SOURCE_CHANNEL_ID_7'])
+source_channel_id_8 = int(os.environ['SOURCE_CHANNEL_ID_8'])
+
+#o
+source_channel_id_9 = int(os.environ['SOURCE_CHANNEL_ID_9'])
+source_channel_id_10 = int(os.environ['SOURCE_CHANNEL_ID_10'])
+source_channel_id_11 = int(os.environ['SOURCE_CHANNEL_ID_11'])
+
 target_channel_id = int(os.environ['TARGET_CHANNEL_ID'])
 
 source_client = discord.Client(intents=discord.Intents.default())
@@ -42,7 +53,14 @@ def build_embed(author_name, author_picture, embed_desc, embed_color, embed_imag
 
 @source_client.event
 async def on_message(message):
-    if message.channel.id == source_channel_id or message.channel.id == source_channel_id_2 or message.channel.id == source_channel_id_3 or message.channel.id == source_channel_id_4:
+    if message.channel.id == source_channel_id or message.channel.id == source_channel_id_2 or message.channel.id == source_channel_id_3 or message.channel.id == source_channel_id_4 or \
+    message.channel.id == source_channel_id_5 or \
+    message.channel.id == source_channel_id_6 or \
+    message.channel.id == source_channel_id_7 or \
+    message.channel.id == source_channel_id_8 or \
+    message.channel.id == source_channel_id_9 or \
+    message.channel.id == source_channel_id_10 or \
+    message.channel.id == source_channel_id_11:
         print(message)
         author_name = message.author.name + "#" + message.author.discriminator
         if len(message.attachments) > 0:
