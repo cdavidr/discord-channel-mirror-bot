@@ -62,7 +62,7 @@ async def on_message(message):
     message.channel.id == source_channel_id_10 or \
     message.channel.id == source_channel_id_11:
         print(message)
-        author_name = message.author.name + "#" + message.author.discriminator
+        author_name = message.author.name
         if len(message.attachments) > 0:
             image_url = message.attachments[0].url
         else:
