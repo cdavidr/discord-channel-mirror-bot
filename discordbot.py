@@ -28,12 +28,9 @@ target_channel_id = int(os.environ['TARGET_CHANNEL_ID'])
 source_client = discord.Client(intents=discord.Intents.default())
 target_client = discord.Client(intents=discord.Intents.default())
 
-source_client.change_presence(status=discord.Status.offline)
-
 def find_url(string):
     url = re.findall("http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", string) # noqa
     return url
-
 
 def build_embed(author_name, author_picture, embed_desc, embed_color, embed_image):
     emb = discord.Embed()
@@ -49,11 +46,11 @@ def build_embed(author_name, author_picture, embed_desc, embed_color, embed_imag
         print(author_name + " linked an image")
     else:
         print(author_name + ": " + embed_desc)
-    return emb
-
+    return emb   
 
 @source_client.event
 async def on_message(message):
+    await source_client.change_presence(status=discord.Status.offline)
     if message.channel.id == source_channel_id or message.channel.id == source_channel_id_2 or message.channel.id == source_channel_id_3 or message.channel.id == source_channel_id_4 or \
     message.channel.id == source_channel_id_5 or \
     message.channel.id == source_channel_id_6 or \
