@@ -50,8 +50,7 @@ def build_embed(author_name, author_picture, embed_desc, embed_color, embed_imag
 
 @source_client.event
 async def on_message(message):
-    if source_client.presence.status != 'offline':
-        await source_client.change_presence(status=discord.Status.offline)
+    await source_client.change_presence(status=discord.Status.offline)
     if message.channel.id == source_channel_id or message.channel.id == source_channel_id_2 or message.channel.id == source_channel_id_3 or message.channel.id == source_channel_id_4 or \
     message.channel.id == source_channel_id_5 or \
     message.channel.id == source_channel_id_6 or \
