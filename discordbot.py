@@ -28,7 +28,7 @@ target_channel_id = int(os.environ['TARGET_CHANNEL_ID'])
 source_client = discord.Client(intents=discord.Intents.default())
 target_client = discord.Client(intents=discord.Intents.default())
 
-await source_client.change_presence(status=discord.Status.offline)
+source_client.change_presence(status=discord.Status.offline)
 
 def find_url(string):
     url = re.findall("http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", string) # noqa
